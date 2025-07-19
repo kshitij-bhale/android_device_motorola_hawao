@@ -38,6 +38,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := hawao
+TARGET_USES_MOTCAMERA4 := true
+$(call inherit-product, vendor/motorola/MotCamera4-bengal/motcamera4.mk)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
 
